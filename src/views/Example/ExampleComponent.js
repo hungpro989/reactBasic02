@@ -15,12 +15,17 @@ class ExampleComponent extends React.Component {
             name: event.target.value
         })
     }
+    handleOnClickButton = () => {
+        alert('Click Me!')
+    }
     render() {
         return (
             <div>
                 <input value={this.state.name} type="text" onChange={(event) => this.handleOnChangeName(event)} />
                 <h1>Xin chào, Mr.{this.state.name}</h1>
                 <h2>Mô tả: {this.state.desc}</h2>
+                <button onClick={() => this.handleOnClickButton()}>Click Me</button>
+
             </div>
         )
     }
