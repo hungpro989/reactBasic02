@@ -15,9 +15,9 @@ class ChildComponent extends React.Component {
 
         let { arrJobs } = this.props;
         let { showJobs } = this.state;
-        let check = showJobs === true ? 'showJobs = true' : 'showJobs = false';
-        console.log('>>> call render props: ', this.props)
-        console.log('>>> call check show-hide: ', check)
+        //let check = showJobs === true ? 'showJobs = true' : 'showJobs = false';
+        //console.log('>>>ChildComp: call render props: ', this.props)
+        //console.log('>>>ChildComp: call check show-hide: ', check)
         return (
             <>
                 <div>

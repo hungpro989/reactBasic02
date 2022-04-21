@@ -26,8 +26,14 @@ class ExampleComponent extends React.Component {
     handleOnClickButton = () => {
         alert('Click Me!')
     }
+    addNewJob = (job) => {
+        console.log('Check job from parent!', job)
+        this.setState({
+            arrJobs: [...this.state.arrJobs, job]
+        })
+    }
     render() {
-        console.log('>>> call render state: ', this.state)
+        //console.log('>>> call render state: ', this.state)
         return (
             <div>
 
@@ -35,7 +41,9 @@ class ExampleComponent extends React.Component {
                 <h1>Xin chào, Mr.{this.state.name}</h1>
                 <h2>Mô tả: {this.state.desc}</h2>
                 <button onClick={() => this.handleOnClickButton()}>Click Me</button>
-                <AddComponent />
+                <AddComponent
+                    addNewJob={this.addNewJob}
+                />
                 <ChildComponent
                     arrJobs={this.state.arrJobs}
                 />
