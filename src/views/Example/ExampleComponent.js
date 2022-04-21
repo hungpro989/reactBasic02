@@ -35,7 +35,7 @@ class ExampleComponent extends React.Component {
     //     console.log('>>> Check data input submit: ', this.state.firstName, '+', this.state.lastName)
     // }
     render() {
-        console.log('>>> call render: ', this.state)
+
         return (
             <div>
                 {/* <input value={this.state.name} type="text" onChange={(event) => this.handleOnChangeName(event)} />
@@ -55,9 +55,11 @@ class ExampleComponent extends React.Component {
                         <input type="submit" value="Submit" onClick={(event) => this.handleSubmit(event)} />
                     </form>
                 </div> */}
-                <ChildComponent nameChild={'1'} />
-                <ChildComponent nameChild={'2'} />
-                <ChildComponent nameChild={'3'} />
+                <ChildComponent
+                    nameChild={'Hưng'}
+                    ageChild={'27'}
+                />
+
             </div >
         )
     }
