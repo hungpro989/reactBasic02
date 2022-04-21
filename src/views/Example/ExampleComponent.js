@@ -12,9 +12,9 @@ class ExampleComponent extends React.Component {
         firstName: '',
         //lastName: '',
         arrJobs: [
-            { id: 'Job01', title: 'Java', salary: '1000' },
-            { id: 'Job02', title: 'PHP', salary: '1000' },
-            { id: 'Job03', title: 'Python', salary: '1000' },
+            { id: 'Job01', title: 'Java', salary: '22000' },
+            { id: 'Job02', title: 'PHP', salary: '5000' },
+            { id: 'Job03', title: 'Python', salary: '7000' },
         ]
     }
     // handleOnChangeName = (event) => {
@@ -43,9 +43,9 @@ class ExampleComponent extends React.Component {
         console.log('>>> call render state: ', this.state)
         return (
             <div>
-                <input type="text" id="fname" name="fname"
+                {/* <input type="text" id="fname" name="fname"
                     value={this.state.firstName} onChange={(event) => this.handleOnChangeFirstName(event)}
-                />
+                /> */}
                 {/* <input value={this.state.name} type="text" onChange={(event) => this.handleOnChangeName(event)} />
                 <h1>Xin chào, Mr.{this.state.name}</h1>
                 <h2>Mô tả: {this.state.desc}</h2>
