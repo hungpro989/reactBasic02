@@ -32,6 +32,15 @@ class ExampleComponent extends React.Component {
             arrJobs: [...this.state.arrJobs, job]
         })
     }
+    deleteAJob = (job) => {
+        let currenJobs = this.state.arrJobs
+        //console.log('trước fillter', currenJobs)
+        currenJobs = currenJobs.filter(item => item.id !== job.id);
+        //console.log('Sau filter:', currenJobs)
+        this.setState({
+            arrJobs: currenJobs
+        })
+    }
     render() {
         //console.log('>>> call render state: ', this.state)
         return (
@@ -46,6 +55,7 @@ class ExampleComponent extends React.Component {
                 />
                 <ChildComponent
                     arrJobs={this.state.arrJobs}
+                    deleteAJob={this.deleteAJob}
                 />
 
             </div >
