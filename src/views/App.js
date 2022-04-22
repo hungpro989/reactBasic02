@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.scss';
-import ExampleComponent from './Example/ExampleComponent';
+//import ExampleComponent from './Example/ExampleComponent';
+import ListTodo from './Todos/ListTodo';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -10,16 +13,21 @@ function App() {
         <p>
           Edit <code>src/App.js</code> Hưng đẹp zai.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <ExampleComponent />
+
+        {/* <ExampleComponent /> */}
+        <ListTodo />
       </header>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 }
